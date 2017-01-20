@@ -1,33 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CSS/HTML Workshop with Drivy</title>
-  </head>
-  <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script id="template" type="x-tmpl-mustache">
+<link href='css.css' rel='stylesheet' type='text/css'>
+<div class="login" >
+  <div class="heading">
+    <img src="http://consocollaborative.com/content/uploads/2015/03/image001.png" width="350" height="150" align="center">
+    <form action="#" >
+
+      <div  class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-star"></i></span>
+        <input id="car" type="text" class="form-control" placeholder="Car model">
+      </div>
+<h2>  </h2>
+      <div  class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-eur"></i></span>
+        <input id="priceDay" type="number" class="form-control" placeholder="Price by day">
+      </div>
+      <h2>  </h2>
+      <div  class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-eur"></i></span>
+        <input id="priceKm" type="number" class="form-control" placeholder="Price by km">
+      </div>
+      <h2>  </h2>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-flag"></i></span>
+        <input id="distance" type="number" class="form-control" placeholder="Distance">
+      </div>
+      <h2>  </h2>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+        <input id="begin" type="date" class="form-control" placeholder="Debut date">
+      </div>
+      <h2>  </h2>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+        <input id="end" type="date" class="form-control" placeholder="Return date">
+      </div>
+      <h3>Deductible option</h3>
+      <div class="input-group input-group-lg">
+        <span  class="input-group-addon"><i class="fa fa-check"></i></span>
+        <input class="option" type="checkbox" align="center" placeholder="Deductible option"/>
+      </div>
+      <h2>  </h2>
+      <button id="compute" class="float">Compute</button>
+    </form>
+  </div>
+</div>
+<div class="login" >
+  <div class="heading">
+    <form action="#" >
+
+      <div align="center" id="actors"></div>
+      <script  id="template" type="x-tmpl-mustache">
       {{#actors}}
-        <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
+        <div class="actor" >
+          <div  class="input-group input-group-lg" >
+        <span  class="input-group-addon" ><i>{{who}} {{type}}</i></span>
+        <h1 class="option" color="">   {{amount}}<h1/>
+      </div>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       {{/actors}}
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-    <script src="drivy.js"></script>
-    <script src="index.js"></script>
-  </body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+      <script src="drivy.js"></script>
+      <script src="index.js"></script>
+
+    </form>
+  </div>
+</div>
+
+</body>
 </html>
+
+
